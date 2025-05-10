@@ -34,19 +34,19 @@ const Header = () => {
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="font-heading font-bold text-2xl text-portfolio-green">
-          AL
+          AJAY
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-1">
           <ul className="flex space-x-1">
-            {menuItems.map((item, i) => (
+            {menuItems.map((item) => (
               <li key={item.name}>
                 <a 
                   href={item.href} 
                   className="nav-link"
                 >
-                  <span className="text-portfolio-green mr-1">{i + 1}.</span> {item.name}
+                  {item.name}
                 </a>
               </li>
             ))}
@@ -84,14 +84,13 @@ const Header = () => {
         <div className={`fixed top-[72px] right-0 bottom-0 w-3/4 bg-portfolio-lightNavy transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
           <div className="flex flex-col items-center justify-center h-full">
             <ul className="flex flex-col space-y-6 text-center">
-              {menuItems.map((item, i) => (
+              {menuItems.map((item) => (
                 <li key={item.name}>
                   <a 
                     href={item.href} 
                     className="text-lg block py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span className="text-portfolio-green block text-sm mb-1">{i + 1}.</span> 
                     {item.name}
                   </a>
                 </li>

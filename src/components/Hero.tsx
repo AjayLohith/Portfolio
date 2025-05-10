@@ -53,7 +53,7 @@ const Hero = () => {
             <img 
               src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
               alt="Developer" 
-              className="object-cover w-full h-full rounded-md grayscale hover:grayscale-0 transition-all duration-300"
+              className="object-cover w-full h-full rounded-md transition-all duration-300"
             />
             <div className="absolute inset-0 border-2 border-portfolio-green rounded-md transform translate-x-4 translate-y-4 -z-10"></div>
           </div>
