@@ -23,18 +23,34 @@ const Index = () => {
 
     const observer = new IntersectionObserver(handleIntersection, { 
       threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px"
+      rootMargin: "0px 0px -50px 0px" // Adjusted to trigger animations earlier
     });
 
-    const animatedElements = document.querySelectorAll(".animate-item");
-    animatedElements.forEach((el) => {
-      observer.observe(el);
-    });
+    // Short timeout to ensure DOM is fully loaded
+    setTimeout(() => {
+      const animatedElements = document.querySelectorAll(".animate-item");
+      
+      if (animatedElements.length === 0) {
+        console.log("No animated elements found");
+      } else {
+        console.log(`Found ${animatedElements.length} animated elements`);
+        animatedElements.forEach((el) => {
+          observer.observe(el);
+          // Force show elements after a delay as fallback
+          setTimeout(() => {
+            el.classList.add("show");
+          }, 1000);
+        });
+      }
+    }, 100);
 
     return () => {
-      animatedElements.forEach((el) => {
-        observer.unobserve(el);
-      });
+      const animatedElements = document.querySelectorAll(".animate-item");
+      if (observer) {
+        animatedElements.forEach((el) => {
+          observer.unobserve(el);
+        });
+      }
     };
   }, []);
 
