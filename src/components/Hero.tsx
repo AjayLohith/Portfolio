@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center pt-16 pb-0 px-6">
-      <div className="max-w-5xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="space-y-5">
           <p 
             className={`text-portfolio-green font-mono text-lg transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'} transition-all duration-300 delay-100`}
@@ -42,6 +42,20 @@ const Hero = () => {
             >
               Check out my projects
             </a>
+          </div>
+        </div>
+        
+        {/* Profile image */}
+        <div 
+          className={`relative order-first lg:order-last mx-auto max-w-md transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'} transition-all duration-300 delay-600`}
+        >
+          <div className="bg-portfolio-green/10 border-2 border-portfolio-green rounded-md w-64 h-64 md:w-80 md:h-80 relative mx-auto overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+              alt="Developer" 
+              className="object-cover w-full h-full rounded-md grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <div className="absolute inset-0 border-2 border-portfolio-green rounded-md transform translate-x-4 translate-y-4 -z-10"></div>
           </div>
         </div>
       </div>

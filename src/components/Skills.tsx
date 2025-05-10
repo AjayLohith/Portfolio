@@ -1,53 +1,36 @@
 
 import { useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { 
+  CheckIcon, 
+  ArrowRightIcon,
+  LaptopIcon, 
+  ServerIcon, 
+  PaintbrushIcon 
+} from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Languages",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Java"],
+    title: "Programming Languages",
+    icon: <LaptopIcon className="h-6 w-6 text-portfolio-green" />,
+    skills: ["Python", "Java", "JavaScript", "TypeScript", "C++"],
   },
   {
-    title: "Frontend",
-    skills: ["React.js", "HTML", "CSS", "JavaScript"],
+    title: "Frontend Technologies",
+    icon: <PaintbrushIcon className="h-6 w-6 text-portfolio-green" />,
+    skills: ["HTML", "CSS", "React", "Redux", "Bootstrap", "SASS"],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express.js"],
+    title: "Backend Technologies",
+    icon: <ServerIcon className="h-6 w-6 text-portfolio-green" />,
+    skills: ["Node.js", "Express.js", "MongoDB", "SQL", "RESTful APIs"],
   },
   {
-    title: "Database",
-    skills: ["MongoDB", "MySQL (Basics)"],
-  },
-  {
-    title: "Other Tools",
-    skills: ["Git", "GitHub", "VS Code", "IntelliJ IDEA"],
+    title: "Tools & Others",
+    icon: <ArrowRightIcon className="h-6 w-6 text-portfolio-green" />,
+    skills: ["Git", "GitHub", "VS Code", "Netlify", "Heroku", "Figma"],
   },
 ];
-
-const SkillBar = ({ skill, index }: { skill: string; index: number }) => {
-  // Calculate different percentages for skills to show varying proficiency
-  const getRandomPercentage = (min = 70, max = 95) => {
-    // Use index to create slightly different percentages
-    return min + ((index * 7) % (max - min));
-  };
-
-  const percentage = getRandomPercentage();
-
-  return (
-    <div className="mb-4 animate-item">
-      <div className="flex justify-between mb-1">
-        <span>{skill}</span>
-        <span className="text-portfolio-green">{percentage}%</span>
-      </div>
-      <div className="h-2 bg-portfolio-lightNavy rounded-full overflow-hidden">
-        <div 
-          className="h-full bg-portfolio-green rounded-full"
-          style={{ width: `${percentage}%`, transition: `width 1s ease-in-out` }}
-        ></div>
-      </div>
-    </div>
-  );
-};
 
 const Skills = () => {
   useEffect(() => {
@@ -77,44 +60,31 @@ const Skills = () => {
           <span className="text-portfolio-green mr-2">02.</span> Skills
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-8">
-            {skillCategories.slice(0, 3).map((category, categoryIndex) => (
-              <div key={category.title} className="animate-item">
-                <h3 className="text-xl font-medium mb-4 text-portfolio-green">
+        <div className="space-y-12">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={category.title} className="animate-item">
+              <div className="flex items-center mb-6">
+                {category.icon}
+                <h3 className="text-2xl font-medium ml-2 text-portfolio-green">
                   {category.title}
                 </h3>
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <SkillBar 
-                      key={skill} 
-                      skill={skill} 
-                      index={categoryIndex * 5 + skillIndex} 
-                    />
-                  ))}
-                </div>
               </div>
-            ))}
-          </div>
-
-          <div className="space-y-8">
-            {skillCategories.slice(3).map((category, categoryIndex) => (
-              <div key={category.title} className="animate-item">
-                <h3 className="text-xl font-medium mb-4 text-portfolio-green">
-                  {category.title}
-                </h3>
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <SkillBar 
-                      key={skill} 
-                      skill={skill} 
-                      index={(categoryIndex + 3) * 5 + skillIndex} 
-                    />
-                  ))}
-                </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <Card 
+                    key={skill} 
+                    className="animate-item bg-portfolio-navy border-portfolio-lightNavy hover:border-portfolio-green transition-colors duration-300"
+                  >
+                    <CardContent className="p-4 flex items-center justify-between">
+                      <span className="text-portfolio-lightestSlate font-medium">{skill}</span>
+                      <CheckIcon className="h-5 w-5 text-portfolio-green" />
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
