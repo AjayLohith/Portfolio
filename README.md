@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# Ajay's Web Developer Portfolio
 
-## Project info
+This is Ajay's personal web developer portfolio, designed to showcase skills, projects, and professional experiences. The portfolio is built with a focus on performance, accessibility, and compatibility across devices, providing a seamless user experience.
 
-**URL**: https://lovable.dev/projects/9903c9b0-7c69-4bb8-af42-40501056c978
+## Features
 
-## How can I edit this code?
+- **Dynamic Typing Animation**: The navbar dynamically types out "Ajay_" with a blinking underscore.
+- **Responsive Design**: Fully responsive layout for both desktop and mobile devices.
+- **Smooth Scrolling**: Smooth navigation to sections with proper offset handling for fixed headers.
+- **Sidebar Navigation**: A collapsible sidebar for mobile users with easy navigation.
+- **Active Section Highlighting**: Highlights the active section in the navbar as the user scrolls.
+- **Customizable Sections**: Includes sections like About, Skills, Projects, Experience, Education, and Contact.
+- **Resume Download**: A dedicated button to download Ajay's resume.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9903c9b0-7c69-4bb8-af42-40501056c978) and start prompting.
+### Frontend
+- **React**: Component-based architecture for building the UI.
+- **TypeScript**: Strongly typed JavaScript for better code quality and maintainability.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **HTML5 & CSS3**: Semantic markup and modern styling.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Tools & Libraries
+- **Vite**: Fast build tool for modern web projects.
+- **React Hooks**: For managing state and lifecycle methods.
+- **Node.js**: For managing dependencies and running the development server.
+- **ESLint & Prettier**: For maintaining code quality and formatting.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The project is organized into the following key components:
 
-Follow these steps:
+### Components
+- **Header**: 
+  - Contains the navbar with dynamic typing animation and a blinking underscore.
+  - Includes a responsive sidebar for mobile navigation.
+  - Highlights the active section as the user scrolls.
+- **About**: A section to introduce Ajay and his background.
+- **Skills**: Displays Ajay's technical skills and expertise.
+- **Projects**: Showcases Ajay's portfolio projects with descriptions and links.
+- **Experience**: Highlights Ajay's professional experience and roles.
+- **Education**: Lists Ajay's educational background and achievements.
+- **Contact**: A form or section for users to get in touch with Ajay.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Utilities
+- **`utils/cn.ts`**: Utility for conditional class names.
+- **Smooth Scrolling**: Ensures proper alignment of sections when navigating.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## UI and Compatibility
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **Responsive Design**: The UI is fully responsive and adapts seamlessly to different screen sizes, including desktops, tablets, and mobile devices.
+- **Cross-Browser Compatibility**: Tested on modern browsers like Chrome, Firefox, Edge, and Safari.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## How to Run the Project
 
-**Use GitHub Codespaces**
+### Prerequisites
+- **Node.js** (v16 or higher)
+- **npm** or **yarn**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ajay-portfolio.git
+   cd ajay-portfolio
+   ```
 
-## What technologies are used for this project?
+## Contributors
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9903c9b0-7c69-4bb8-af42-40501056c978) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- [Ajay Lohith](https://github.com/AjayLohith)
