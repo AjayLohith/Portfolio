@@ -37,11 +37,11 @@ const Footer = () => {
         </a>
       </div>
       <p className="text-sm">
-        Designed & Built by Ajay Lohith Kulla
+        Designed & Built by Ajay
       </p>
-      <p className="text-xs opacity-70 mt-1">
+      {/* <p className="text-xs opacity-70 mt-1">
         © {currentYear} All Rights Reserved
-      </p>
+      </p> */}
     </footer>
   );
 };

@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect } from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa"; // Import LinkedIn and GitHub icons
 
 const Contact = () => {
   useEffect(() => {
@@ -26,17 +26,41 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="bg-portfolio-lightNavy/30 px-6">
+    <section id="contact" className="bg-portfolio-lightNavy/30 px-6 py-12">
       <div className="max-w-3xl mx-auto text-center">
         <div className="animate-item">
-          <span className="text-portfolio-green font-mono">06. What's Next?</span>
+          <span className="text-portfolio-green text-8xl md:text-6xl font-bold my-4 animate-item">
+            Contact
+          </span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold my-4 animate-item">Get In Touch</h2>
         <p className="text-portfolio-slate mb-8 max-w-lg mx-auto animate-item">
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!
         </p>
-        
-        <div className="grid md:grid-cols-2 gap-8">
+
+        {/* Social Icons */}
+        <div className="flex justify-center space-x-6 mt-6">
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/your-profile" // Replace with your LinkedIn profile URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-portfolio-green text-3xl hover:text-portfolio-lightGreen transition-colors duration-300"
+          >
+            
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/your-username" // Replace with your GitHub profile URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-portfolio-green text-3xl hover:text-portfolio-lightGreen transition-colors duration-300"
+          >
+           
+          </a>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mt-8">
           <div className="text-left animate-item">
             <h3 className="text-xl font-medium mb-4 text-portfolio-green">Contact Information</h3>
             <ul className="space-y-3">
@@ -58,19 +82,29 @@ const Contact = () => {
               </li>
               <li className="flex items-center">
                 <span className="text-portfolio-green mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                  </svg>
+                  <FaLinkedin className="h-5 w-5" /> {/* LinkedIn Icon */}
                 </span>
-                <a href="https://linkedin.com/in/ajay-lohith-kulla/" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-green">linkedin.com/in/ajay-lohith-kulla</a>
+                <a
+                  href="https://linkedin.com/in/ajay-lohith-kulla/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-portfolio-green"
+                >
+                  LinkedIn
+                </a>
               </li>
               <li className="flex items-center">
                 <span className="text-portfolio-green mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+                  <FaGithub className="h-5 w-5" /> {/* GitHub Icon */}
                 </span>
-                <a href="https://github.com/AjayLohith" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-green">github.com/AjayLohith</a>
+                <a
+                  href="https://github.com/AjayLohith"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-portfolio-green"
+                >
+                  Github
+                </a>
               </li>
             </ul>
           </div>

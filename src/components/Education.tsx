@@ -3,8 +3,8 @@ import { useEffect } from "react";
 
 const educations = [
   {
-    degree: "B.E., Electrical Engineering",
-    period: "2022 – Present",
+    degree: "B.E. Electrical Engineering",
+    period: "2022 – 2026",
     institution: "Vignan Institute of Information and Technology, Visakhapatnam",
     gpa: "GPA-8.2"
   },
