@@ -59,7 +59,7 @@ const Hero = () => {
           {/* Inner Image */}
           <div className="relative z-10 bg-portfolio-navy rounded-lg overflow-hidden">
             <img
-              src="public\14562026-bed8-4587-9bc9-402f7145b230.jpeg" // Replace with your actual image path
+              src="/14562026-bed8-4587-9bc9-402f7145b230.jpeg" // Correct path for public folder
               alt="Your Photo"
               className="w-full h-auto object-cover rounded-lg"
             />
