@@ -39,7 +39,7 @@ const About = () => {
                     {/* This would be replaced with an actual image in production */}
                     <span className="text-6xl">
                       <img
-                        src="src\components\14562026-bed8-4587-9bc9-402f7145b230.jpeg" // Replace with your actual image path
+                        src="public\14562026-bed8-4587-9bc9-402f7145b230.jpeg" // Replace with your actual image path
                         alt="Your Photo"
                         className="w-full h-full object-cover rounded-lg"
                       />
