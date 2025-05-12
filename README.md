@@ -1,6 +1,6 @@
-# Ajay's Web Developer Portfolio
+# My Portfolio
 
-This is Ajay's personal web developer portfolio, designed to showcase skills, projects, and professional experiences. The portfolio is built with a focus on performance, accessibility, and compatibility across devices, providing a seamless user experience.
+This is my personal web developer portfolio, designed to showcase skills, projects, and professional experiences. The portfolio is built with a focus on performance, accessibility, and compatibility across devices, providing a seamless user experience.
 
 ## Features
 
