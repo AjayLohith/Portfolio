@@ -4,13 +4,12 @@ This is Ajay's personal web developer portfolio, designed to showcase skills, pr
 
 ## Features
 
-- **Dynamic Typing Animation**: The navbar dynamically types out "Ajay_" with a blinking underscore.
 - **Responsive Design**: Fully responsive layout for both desktop and mobile devices.
 - **Smooth Scrolling**: Smooth navigation to sections with proper offset handling for fixed headers.
 - **Sidebar Navigation**: A collapsible sidebar for mobile users with easy navigation.
 - **Active Section Highlighting**: Highlights the active section in the navbar as the user scrolls.
 - **Customizable Sections**: Includes sections like About, Skills, Projects, Experience, Education, and Contact.
-- **Resume Download**: A dedicated button to download Ajay's resume.
+- **Resume Download**: A dedicated button to download resume.
 
 ---
 
@@ -39,12 +38,12 @@ The project is organized into the following key components:
   - Contains the navbar with dynamic typing animation and a blinking underscore.
   - Includes a responsive sidebar for mobile navigation.
   - Highlights the active section as the user scrolls.
-- **About**: A section to introduce Ajay and his background.
+- **About**: A section to introduction and background.
 - **Skills**: Displays Ajay's technical skills and expertise.
 - **Projects**: Showcases Ajay's portfolio projects with descriptions and links.
-- **Experience**: Highlights Ajay's professional experience and roles.
-- **Education**: Lists Ajay's educational background and achievements.
-- **Contact**: A form or section for users to get in touch with Ajay.
+- **Experience**: Highlights professional experience and roles.
+- **Education**: Lists educational background and achievements.
+- **Contact**: A form or section for users to get in touch.
 
 ### Utilities
 - **`utils/cn.ts`**: Utility for conditional class names.
@@ -71,7 +70,3 @@ The project is organized into the following key components:
    git clone https://github.com/your-username/ajay-portfolio.git
    cd ajay-portfolio
    ```
-
-## Contributors
-
-- [Ajay Lohith](https://github.com/AjayLohith)
