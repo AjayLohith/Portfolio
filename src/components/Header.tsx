@@ -181,7 +181,8 @@ const Header = () => {
               ))}
               <li>
                 <a
-                  href="/ajayResume (1).pdf"
+                href="/ajayResume (1).pdf" // Update with your actual resume path
+                
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button mt-4 text-white"

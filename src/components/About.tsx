@@ -31,22 +31,16 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 md:flex-row-reverse gap-10">
           {/* Photo Placeholder */}
           <div className="md:col-span-2 animate-item">
-            <div className="relative group mx-auto max-w-xs">
-              <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
-              <div className="relative z-10 bg-portfolio-navy">
-                <div className="aspect-square rounded overflow-hidden">
-                  <div className="w-full h-full bg-portfolio-lightNavy flex items-center justify-center text-portfolio-green">
-                    {/* This would be replaced with an actual image in production */}
-                    <span className="text-6xl">
-                      <img
-                        src="/14562026-bed8-4587-9bc9-402f7145b230.jpeg" // Replace with your actual image path
-                        alt="Your Photo"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute inset-0 opacity-20 hover:opacity-0 transition-opacity duration-300"></div>
+            <div className="relative group mx-auto w-[360px] h-[360px]">
+              {/* Outer Circle */}
+              <div className="absolute inset-0 border-4 border-portfolio-green rounded-full transform translate-x-5 translate-y-4 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
+              {/* Inner Circle */}
+              <div className="relative z-10 bg-portfolio-navy rounded-full overflow-hidden w-full h-full">
+                <img
+                  src="/ajay2.png" // Replace with your actual image path
+                  alt="Your Photo"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
           </div>
