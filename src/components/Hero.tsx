@@ -53,18 +53,18 @@ const Hero = () => {
         </div>
 
         {/* Right Side: Photo Placeholder */}
-        <div className="relative group mx-auto w-full sm:w-[200px] md:w-[500px] lg:w-[600px] xl:w-[400px] h-[calc(100%-5px)]">
+        {/* <div className="relative group mx-auto w-full sm:w-[200px] md:w-[500px] lg:w-[600px] xl:w-[400px] h-[calc(100%-5px)]"> */}
           {/* Outer Border */}
-          <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+          {/* <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div> */}
           {/* Inner Image */}
-          <div className="relative z-10 bg-portfolio-navy rounded-lg overflow-hidden">
-            <img
-              src="/ajay.jpg" // Correct path for public folder
-              alt="Your Photo"
-              className="w-full h-full object-contain rounded-lg"
-            />
-          </div>
-        </div>
+          {/* <div className="relative z-10 bg-portfolio-navy rounded-lg overflow-hidden"> */}
+            {/* <img */}
+              {/* src="/ajay.jpg" // Correct path for public folder */}
+              {/* alt="Your Photo" */}
+              {/* className="w-full h-full object-contain rounded-lg" */}
+            {/* /> */}
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </section>
   );
