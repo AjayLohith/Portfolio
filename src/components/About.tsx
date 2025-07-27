@@ -47,16 +47,16 @@ const About = () => {
 
           {/* About Text */}
           <div className="md:col-span-3 space-y-4">
-            <p className="animate-item text-white">
-              Hello! I'm Ajay Lohith Kulla, a dedicated professional with a background in Electrical Engineering, currently developing skills in Java and MERN technologies. I'm passionate about software development with experience in projects like object detection and task-based learning.
+            <p className="animate-item text-portfolio-textPrimary">
+              Hello! I'm Ajay Lohith Kulla, a dedicated professional with a background in Electrical Engineering, currently developing skills in Java and MERN technologies.
             </p>
-            <p className="animate-item text-white">
+            <p className="animate-item text-portfolio-textPrimary">
               My journey into software development started during my engineering studies, where I discovered my passion for creating digital solutions. I'm particularly interested in web development and have been focusing on building my skills in both frontend and backend technologies.
             </p>
-            <p className="animate-item text-white">
+            {/* <p className="animate-item text-portfolio-textPrimary">
               I'm currently seeking an entry-level role to apply my technical skills and contribute to innovative solutions in the software development industry.
-            </p>
-            <p className="animate-item text-white">
+            </p> */}
+            <p className="animate-item text-portfolio-textPrimary">
               Here are a few technologies I've been working with recently:
             </p>
             <ul className="grid grid-cols-2 gap-2 mt-4">

@@ -1,7 +1,42 @@
 import { Badge } from "@/components/ui/badge";
 import { useEffect } from "react";
+import { FiGithub, FiExternalLink } from "react-icons/fi"; // ✅ Import icons
 
 const projects = [
+  
+ {
+  title: "PlacementPedia",
+  description:
+    "A full-stack platform designed to help college students prepare for placements by accessing real interview experiences shared by peers. Features include user authentication, admin approval for content quality, and dynamic AI-generated company descriptions. Organized company-wise content and modern deployment architecture ensure a smooth experience.",
+  tech: [
+    "React (Vite)",
+    "Tailwind CSS",
+    "React Router",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Firebase API",
+    "Render",
+    "Vercel"
+  ],
+  github: "https://github.com/AjayLohith/PlacementPortal", // Replace with actual repo link
+  live: "https://placementpedia.vercel.app/",               // Replace with actual live link
+  image: "/placeholder.svg",
+}
+,
+
+ {
+  title: "CodeComplexer",
+  description:
+    "Built a real-time code analysis tool supporting multiple programming languages. Provides instant detection of time and space complexity, with intelligent suggestions for optimization. Features a fast and minimal UI using a web-based code editor. Backend powered by Firebase, with seamless deployment on Vercel.",
+  tech: ["JavaScript", "Firebase", "Vercel", "Tailwind CSS", "Monaco Editor"],
+  github: "https://github.com/AjayLohith/CodeComplexer", // Replace with actual repo link
+  live: "https://codecomplexer.vercel.app/",               // Replace with actual live link
+  image: "/placeholder.svg",
+},
+
+  
   {
     title: "ListiFy",
     description:
@@ -24,76 +59,50 @@ const projects = [
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
   return (
-    <div className="relative group mx-auto animate-pop-in">
-      {/* Outer Border */}
-      <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0"></div>
-      {/* Solid Card */}
-      <div className="relative bg-portfolio-lightNavy rounded-md overflow-hidden shadow-lg z-10 animate-item">
+    <div className="relative group mx-auto w-full max-w-5xl">
+      {/* Green Outline Behind the Card */}
+      <div className="absolute inset-0 rounded-lg border-2 border-portfolio-green 
+                      translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 
+                      transition-transform duration-300 z-0 pointer-events-none" />
+
+      {/* Actual Card */}
+      <div className="relative z-10 bg-[#c8f3eb] text-[#1a1a1a] rounded-md shadow-md overflow-hidden animate-item">
         <div className="p-6 md:p-8 space-y-4">
           <div className="flex justify-between items-start">
             <div>
               <div className="text-portfolio-green mb-2 font-mono">Featured Project</div>
-              <h3 className="text-2xl font-semibold hover:text-portfolio-green">
+              <h3 className="text-2xl font-semibold hover:text-portfolio-green transition-colors">
                 {project.title}
               </h3>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-1">
               <a
                 href={project.github}
-                className="text-portfolio-lightestSlate hover:text-portfolio-green transition-colors"
+                className="text-[#1a1a1a] hover:text-portfolio-green transition-colors"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
+                <FiGithub size={22} />
               </a>
               <a
                 href={project.live}
-                className="text-portfolio-lightestSlate hover:text-portfolio-green transition-colors"
-                aria-label="External Link"
+                className="text-[#1a1a1a] hover:text-portfolio-green transition-colors"
+                aria-label="Live Site"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
+                <FiExternalLink size={22} />
               </a>
             </div>
           </div>
-
-          {/* Sub-description text */}
-          <p className="text-white">{project.description}</p>
-
+          <p className="text-[#1a1a1a]">{project.description}</p>
           <div className="flex flex-wrap gap-2 pt-2">
             {project.tech.map((tech) => (
               <Badge
                 key={tech}
                 variant="outline"
-                className="bg-portfolio-navy border-portfolio-green text-portfolio-green"
+                className="bg-transparent border-[#1a1a1a] text-[#1a1a1a]"
               >
                 {tech}
               </Badge>

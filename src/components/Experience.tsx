@@ -85,7 +85,7 @@ const Experience = () => {
         {/* Mobile Layout (scrollable tabs with arrows) */}
         <div className="relative flex items-center my-4 md:hidden">
           <button onClick={() => scrollTabs("left")} className="z-10 p-1">
-            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 10 16">
+            <svg className="w-6 h-6 text-portfolio-textPrimary" fill="currentColor" viewBox="0 0 10 16">
               <path d="M8.766.566A2 2 0 0 0 6.586 1L1 6.586a2 2 0 0 0 0 2.828L6.586 15A2 2 0 0 0 10 13.586V2.414A2 2 0 0 0 8.766.566Z" />
             </svg>
           </button>
@@ -110,7 +110,7 @@ const Experience = () => {
           </div>
 
           <button onClick={() => scrollTabs("right")} className="z-10 p-1">
-            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 10 16">
+            <svg className="w-6 h-6 text-portfolio-textPrimary" fill="currentColor" viewBox="0 0 10 16">
               <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z" />
             </svg>
           </button>

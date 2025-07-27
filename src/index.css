@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -7,35 +6,41 @@
 
 @layer base {
   :root {
-    --background: 224 71% 4%; /* Navy background */
-    --foreground: 213 31% 91%; /* Light text for contrast */
+    /* Light Theme Colors */
+    --background: 0 0% 98%;              /* Marble White */
+    --foreground: 0 0% 10%;              /* Dark Text */
 
-    --card: 222 47% 11%;
-    --card-foreground: 213 31% 91%;
+    --portfolio-cardBg: #9da8a6;
+  --portfolio-cardText: #1a1a1a;
+  --portfolio-green: #64ffda;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 213 31% 91%;
+--card: 150 10% 100%;         /* Intended card background */
+  --card-foreground: 0 0% 10%;
 
-    --primary: 170 100% 70%; /* Teal accent */
-    --primary-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --primary: 170 100% 40%;             /* Teal */
+    --primary-foreground: 0 0% 100%;
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215 20% 65%;
+    --secondary: 0 0% 90%;               /* Light Gray */
+    --secondary-foreground: 0 0% 10%;
 
-    --accent: 220 70% 13%; /* Slightly lighter navy */
-    --accent-foreground: 210 40% 98%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 40%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 0 0% 95%;                  /* Slightly Off White */
+    --accent-foreground: 0 0% 10%;
 
-    --border: 219 29% 14%;
-    --input: 219 29% 14%;
-    --ring: 170 100% 70%;
+    --destructive: 0 84% 60%;            /* Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;                  /* Light border */
+    --input: 0 0% 85%;
+    --ring: 170 100% 40%;                /* Teal Ring */
 
     --radius: 0.5rem;
+    
   }
 }
 
@@ -47,17 +52,21 @@
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
-    @apply bg-portfolio-navy text-portfolio-lightestSlate font-sans;
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  @apply font-sans;
+}
   }
 
   section {
     @apply py-16 md:py-24;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    @apply text-portfolio-lightestSlate font-heading font-semibold;
+    @apply text-[hsl(var(--foreground))] font-heading font-semibold;
   }
 
   h1 {
@@ -77,27 +86,27 @@
   }
 
   p {
-    @apply text-portfolio-slate;
+    @apply text-[hsl(var(--foreground))];
   }
 }
 
 @layer components {
   .section-title {
-    @apply flex items-center text-2xl md:text-3xl font-semibold mb-8 text-portfolio-lightestSlate;
+    @apply flex items-center text-2xl md:text-3xl font-semibold mb-8 text-[hsl(var(--foreground))];
   }
-  
+
   .section-title::after {
     content: "";
-    @apply ml-4 h-px bg-portfolio-lightestNavy flex-grow;
+    @apply ml-4 h-px bg-[hsl(var(--border))] flex-grow;
   }
-  
+
   .nav-link {
-    @apply relative px-3 py-2 text-portfolio-lightSlate hover:text-portfolio-green transition-colors;
+    @apply relative px-3 py-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors;
   }
 
   .button {
-    @apply px-4 py-2 border border-portfolio-green text-portfolio-green rounded transition-all
-    hover:bg-portfolio-green/10;
+    @apply px-4 py-2 border border-[hsl(var(--primary))] text-[hsl(var(--primary))] rounded transition-all
+    hover:bg-[hsl(var(--primary))/0.1];
   }
 
   /* Animation classes for staggered entrance */
@@ -106,12 +115,12 @@
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  
+
   .animate-item.show {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   @keyframes fade-in-up {
     from {
       opacity: 0;
@@ -122,8 +131,8 @@
       transform: translateY(0);
     }
   }
-  
-  /* Replace SCSS @for loop with individual animation delay classes */
+
+  /* Staggered delay */
   .animate-item:nth-child(1) { animation-delay: 0.1s; transition-delay: 0.1s; }
   .animate-item:nth-child(2) { animation-delay: 0.2s; transition-delay: 0.2s; }
   .animate-item:nth-child(3) { animation-delay: 0.3s; transition-delay: 0.3s; }

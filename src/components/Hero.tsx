@@ -21,7 +21,7 @@ const Hero = () => {
             Hi, my name is
           </p>
           <h1
-            className={`text-portfolio-lightestSlate transform ${
+            className={` text-[#1a1a1a] text-portfolio-lightestSlate transform ${
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             } transition-all duration-300 delay-200`}
           >
@@ -35,7 +35,7 @@ const Hero = () => {
             I build things for the web.
           </h2>
           <p
-            className={`max-w-xl text-portfolio-white text-lg md:text-xl transform ${
+            className={`max-w-xl text-portfolio-textPrimary text-lg md:text-xl transform ${
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             } transition-all duration-300 delay-400`}
           >

@@ -9,7 +9,7 @@ const Skills = () => {
             const progressBars = entry.target.querySelectorAll(".progress-bar");
             progressBars.forEach((bar) => {
               const targetWidth = bar.getAttribute("data-width");
-              (bar as HTMLElement).style.width = targetWidth; // Set the width dynamically
+              (bar as HTMLElement).style.width = targetWidth || "0%";
             });
           }
         });
@@ -28,329 +28,81 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-portfolio-lightNavy/30 px-1 py-2 scroll-mt-20"
+      className="bg-portfolio-lightNavy/30 px-4 py-12 scroll-mt-20"
     >
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center mb-8 animate-item" />
         <h2 className="section-title animate-item">
           <span className="text-portfolio-green pl-5 mr-2">02.</span> Skills
         </h2>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 px-4 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {/* Technical Skills */}
-          <div className="relative group mx-1 animate-item">
-            {/* Outer Border */}
-            <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0"></div>
-            {/* Solid Card */}
-            <div className="relative bg-portfolio-lightNavy p-4 rounded-lg shadow-lg z-10">
-              <h3 className="text-lg font-medium mb-2 text-portfolio-green">
-                Frontend Skills
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <p className="flex justify-between">
-                    <span>HTML</span>
-                    <span>90%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="90%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>CSS</span>
-                    <span>85%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="85%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Javascript</span>
-                    <span>85%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="85%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>React.js</span>
-                    <span>90%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="90%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          {/* Card */}
+          {[
+            {
+              title: "Frontend Skills",
+              skills: [
+                { label: "HTML", level: "90%" },
+                { label: "CSS", level: "80%" },
+                { label: "Javascript", level: "70%" },
+                { label: "ReactJs", level: "80%" },
+              ],
+            },
+            {
+              title: "Backend Skills",
+              skills: [
+                { label: "Node.js", level: "75%" },
+                { label: "Express.js", level: "80%" },
+                { label: "MongoDB", level: "80%" },
+                { label: "SQL", level: "85%" },
+              ],
+            },
+            {
+              title: "Languages",
+              skills: [
+                { label: "C", level: "85%" },
+                { label: "C++", level: "80%" },
+                { label: "Python", level: "75%" },
+                { label: "Java", level: "85%" },
+              ],
+            },
+          ].map((section, i) => (
+            <div
+              key={section.title}
+              className="relative group w-full max-w-sm animate-item"
+            >
+              {/* Green Border Behind */}
+              <div className="absolute inset-0 border-2  border-portfolio-green rounded-lg translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0 pointer-events-none" />
 
-          <div className="relative group mx-1 animate-item">
-            {/* Outer Border */}
-            <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0"></div>
-            {/* Solid Card */}
-            <div className="relative bg-portfolio-lightNavy p-4 rounded-lg shadow-lg z-10">
-              <h3 className="text-lg font-medium mb-2 text-portfolio-green">
-                Backend Skills
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <p className="flex justify-between">
-                    <span>Node.js</span>
-                    <span>75%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="75%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Express.js</span>
-                    <span>80%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="80%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>MongoDB</span>
-                    <span>80%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="80%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>SQL</span>
-                    <span>85%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="85%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-              </ul>
+              {/* Solid Card */}
+              <div className="relative  bg-[#c8f3eb]  text-[#080808] p-4 rounded-lg shadow-lg z-10">
+                <h3 className="text-lg font-medium mb-4 text-[#080808] text-portfolio-green">
+                  {section.title}
+                </h3>
+                <ul className="space-y-3">
+                  {section.skills.map((skill) => (
+                    <li key={skill.label}>
+                      <p className="flex justify-between">
+                        <span>{skill.label}</span>
+                        <span>{skill.level}</span>
+                      </p>
+                      <div className="w-full bg-portfolio-slate rounded-full h-2">
+                        <div
+                          className="bg-portfolio-green h-2 rounded-full progress-bar"
+                          data-width={skill.level}
+                          style={{
+                            width: "0%",
+                            transition: "width 1.5s ease-in-out",
+                          }}
+                        ></div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-
-          <div className="relative group mx-1 animate-item">
-            {/* Outer Border */}
-            <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0"></div>
-            {/* Solid Card */}
-            <div className="relative bg-portfolio-lightNavy p-4 rounded-lg shadow-lg z-10">
-              <h3 className="text-lg font-medium mb-2 text-portfolio-green">
-                Languages
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <p className="flex justify-between">
-                    <span>C</span>
-                    <span>85%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="85%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>C++</span>
-                    <span>80%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="80%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Python</span>
-                    <span>75%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="75%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Java</span>
-                    <span>85%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="85%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="relative group mx-1 animate-item">
-            {/* Outer Border */}
-            <div className="absolute inset-0 border-2 border-portfolio-green rounded-lg transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0"></div>
-            {/* Solid Card */}
-            <div className="relative bg-portfolio-lightNavy p-4 rounded-lg shadow-lg z-10">
-              <h3 className="text-lg font-medium mb-2 text-portfolio-green">
-                Soft Skills
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <p className="flex justify-between">
-                    <span>Logial Thinking</span>
-                    <span>85%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="85%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Time Management</span>
-                    <span>80%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="80%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Team Leading</span>
-                    <span>80%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="80%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <p className="flex justify-between">
-                    <span>Desicion Making</span>
-                    <span>80%</span>
-                  </p>
-                  <div className="w-full bg-portfolio-slate rounded-full h-2">
-                    <div
-                      className="bg-portfolio-green h-2 rounded-full progress-bar"
-                      data-width="80%"
-                      style={{
-                        width: "0%",
-                        transition: "width 1.5s ease-in-out",
-                      }}
-                    ></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="relative group mx-auto animate-fade-in-up">
-            {/* Card Content */}
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -6,17 +6,26 @@ const Navbar = () => {
       <h1 className="text-2xl font-bold text-portfolio-green">Portfolio</h1>
       <ul className="flex space-x-4">
         <li>
-          <Link to="/" className="text-portfolio-green hover:underline">
+          <Link
+            to="/"
+            className="text-black font-semibold hover:text-portfolio-green"
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to="/skills" className="text-portfolio-green hover:underline">
+          <Link
+            to="/skills"
+            className="text-black font-semibold hover:text-portfolio-green"
+          >
             Skills
           </Link>
         </li>
         <li>
-          <Link to="/projects" className="text-portfolio-green hover:underline">
+          <Link
+            to="/projects"
+            className="text-black font-semibold hover:text-portfolio-green"
+          >
             Projects
           </Link>
         </li>

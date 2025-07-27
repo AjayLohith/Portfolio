@@ -19,8 +19,8 @@ const Header = () => {
     };
 
     // Start typing effect after 0.5s
-    setTypedName("");  // Clear the name initially
-    timeoutRef.current = setTimeout(() => typeName(), 500); 
+    setTypedName(""); // Clear the name initially
+    timeoutRef.current = setTimeout(() => typeName(), 500);
 
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -60,7 +60,8 @@ const Header = () => {
     const targetElement = document.querySelector(href);
     if (targetElement) {
       const offset = 60;
-      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
@@ -74,7 +75,9 @@ const Header = () => {
     <header
       className={cn(
         "fixed w-full z-50 px-6 py-4 transition-all duration-300",
-        isScrolled ? "bg-portfolio-navy/90 backdrop-blur shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-portfolio-navy/90 backdrop-blur shadow-md"
+          : "bg-transparent"
       )}
     >
       <style>{`
@@ -89,10 +92,23 @@ const Header = () => {
       `}</style>
 
       <nav className="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="#" className="font-heading font-bold text-2xl text-portfolio-green flex items-center">
+        <a
+          href="#"
+          className="text-[#1a1a1a] font-heading font-bold text-2xl text-portfolio-green flex items-center"
+        >
           <span>{typedName}</span>
           <span className="blinking-underscore">_</span>
         </a>
+        <style>{`
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .blinking-underscore {
+    animation: blink 1s step-end infinite;
+    color: #10b981;
+  }
+`}</style>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
@@ -121,7 +137,7 @@ const Header = () => {
             href="/ajayResume (1).pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="button ml-4"
+            className="button ml-4 text-[#1a1a1a]"
           >
             Resume
           </a>
@@ -130,7 +146,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsSidebarOpen(true)}
-          className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="text-[#1a1a1a] inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         >
           <span className="sr-only">Open sidebar</span>
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -169,7 +185,7 @@ const Header = () => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-portfolio-textPrimary rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group"
                     onClick={(e) => {
                       e.preventDefault();
                       handleMenuClick(item.href);
@@ -181,11 +197,10 @@ const Header = () => {
               ))}
               <li>
                 <a
-                href="/ajayResume (1).pdf" // Update with your actual resume path
-                
+                  href="/ajayResume (1).pdf" // Update with your actual resume path
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button mt-4 text-white"
+                  className="button mt-4 text-portfolio-textPrimary"
                   onClick={() => setIsSidebarOpen(false)}
                 >
                   Resume
