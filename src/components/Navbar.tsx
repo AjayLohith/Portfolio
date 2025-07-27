@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-portfolio-lightNavy shadow-md">
+    <nav
+      style={{
+        backgroundColor: "#f1f5f9", // Slightly greyish background
+      }}
+      className="flex justify-between items-center p-4 shadow-md"
+    >
       <h1 className="text-2xl font-bold text-portfolio-green">Portfolio</h1>
       <ul className="flex space-x-4">
         <li>

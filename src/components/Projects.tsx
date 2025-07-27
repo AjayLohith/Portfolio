@@ -136,7 +136,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="px-6">
+    <section id="projects" className="px-6" style={{ backgroundColor: "#edf4f7" }}>
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title animate-item">
           <span className="text-portfolio-green mr-2">03.</span> Projects
