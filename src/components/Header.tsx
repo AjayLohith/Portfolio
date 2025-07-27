@@ -94,21 +94,21 @@ const Header = () => {
       <nav className="max-w-6xl mx-auto flex items-center justify-between">
         <a
           href="#"
-          className="text-[#1a1a1a] font-heading font-bold text-2xl text-portfolio-green flex items-center"
+          className="text-[#1a1a1a] font-heading font-bold text-2xl flex items-center"
         >
           <span>{typedName}</span>
           <span className="blinking-underscore">_</span>
         </a>
         <style>{`
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-  .blinking-underscore {
-    animation: blink 1s step-end infinite;
-    color: #10b981;
-  }
-`}</style>
+              @keyframes blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+              }
+              .blinking-underscore {
+                animation: blink 1s step-end infinite;
+                color: #10b981;
+              }
+            `}</style>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
@@ -134,7 +134,7 @@ const Header = () => {
             ))}
           </ul>
           <a
-            href="/ajayResume (1).pdf"
+            href="/Lohith_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="button ml-4 text-[#1a1a1a]"
