@@ -30,25 +30,25 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 md:flex-row-reverse gap-10">
           {/* Photo Placeholder */}
-          <div className="md:col-span-2 animate-item">
-            <div className="relative group mx-auto w-[360px] h-[360px]">
+          <div className="md:col-span-0 animate-item">
+            {/* <div className="relative group mx-auto w-[360px] h-[360px]"> */}
               {/* Outer Circle */}
-              <div className="absolute inset-0 border-4 border-portfolio-green rounded-full transform translate-x-5 translate-y-4 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
+              {/* <div className="absolute inset-0 border-4 border-portfolio-green rounded-full transform translate-x-5 translate-y-4 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div> */}
               {/* Inner Circle */}
-              <div className="relative z-10 bg-portfolio-navy rounded-full overflow-hidden w-full h-full">
-                <img
-                  src="/ajay2.png" // Replace with your actual image path
+              {/* <div className="relative z-10 bg-portfolio-navy rounded-full overflow-hidden w-full h-full"> */}
+                {/* <img */}
+                  {/* src="/ajay2.png" // Replace with your actual image path
                   alt="Your Photo"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-            </div>
+                  className="w-full h-full object-cover rounded-full" */}
+                {/* /> */}
+              {/* </div> */}
+            {/* </div> */}
           </div>
 
           {/* About Text */}
-          <div className="md:col-span-3 space-y-4">
+          <div className="md:col-span-8 space-y-4">
             <p className="animate-item text-portfolio-textPrimary">
-              Hello! I'm Ajay Lohith Kulla, a dedicated professional with a background in Electrical Engineering, currently developing skills in Java and MERN technologies.
+              Hello! I'm Ajay, a dedicated professional with a background in Electrical Engineering, currently developing skills in Java and MERN technologies.
             </p>
             <p className="animate-item text-portfolio-textPrimary">
               My journey into software development started during my engineering studies, where I discovered my passion for creating digital solutions. I'm particularly interested in web development and have been focusing on building my skills in both frontend and backend technologies.
