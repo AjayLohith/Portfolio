@@ -27,6 +27,16 @@ const projects = [
 ,
 
  {
+  title: "CodeList",
+  description:
+    "CodeList is a secure and simple task-management application built with Spring Boot, MongoDB, and Firebase Authentication. Each user gets a private workspace to add, update, or delete tasks, with all data securely stored in the database. The app follows a clean layered architecture, supports full CRUD functionality with timestamps, and includes Docker support for easy containerization and deployment. Its modern tech stack and smooth deployment process make it efficient, scalable, and user-friendly.",
+  tech: ["Java","Spring Boot", "Firebase", "MongoDB ", "Maven", "Docker"],
+  github: "https://github.com/AjayLohith/CodeList", // Replace with actual repo link
+  live: "https://code-list-omega.vercel.app/",               // Replace with actual live link
+  image: "/placeholder.svg",
+},
+
+ {
   title: "CodeComplexer",
   description:
     "Built a real-time code analysis tool supporting multiple programming languages. Provides instant detection of time and space complexity, with intelligent suggestions for optimization. Features a fast and minimal UI using a web-based code editor. Backend powered by Firebase, with seamless deployment on Vercel.",
