@@ -134,7 +134,7 @@ const Header = () => {
             ))}
           </ul>
           <a
-            href="/Lohith_Resume.pdf"
+            href="/Java_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="button ml-4 text-[#1a1a1a]"
