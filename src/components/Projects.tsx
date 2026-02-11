@@ -91,55 +91,47 @@ const projects = [
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
   return (
-    <div className="relative group mx-auto w-full max-w-5xl">
-      {/* Green Outline Behind the Card */}
-      <div className="absolute inset-0 rounded-lg border-2 border-portfolio-green 
-                      translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 
-                      transition-transform duration-300 z-0 pointer-events-none" />
-
-      {/* Actual Card */}
-      <div className="relative z-10 bg-portfolio-card text-portfolio-textPrimary rounded-md shadow-md overflow-hidden animate-item">
-        <div className="p-6 md:p-8 space-y-4">
-          <div className="flex justify-between items-start">
-            <div>
-              <div className="text-portfolio-green mb-2 font-mono">Featured Project</div>
-              <h3 className="text-2xl font-semibold hover:text-portfolio-green transition-colors">
-                {project.title}
-              </h3>
-            </div>
-            <div className="flex space-x-4 mt-1">
-              <a
-                href={project.github}
-                className="text-portfolio-textPrimary hover:text-portfolio-green transition-colors"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiGithub size={22} />
-              </a>
-              <a
-                href={project.live}
-                className="text-portfolio-textPrimary hover:text-portfolio-green transition-colors"
-                aria-label="Live Site"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiExternalLink size={22} />
-              </a>
-            </div>
+    <div className="mx-auto w-full max-w-5xl border-4 border-black bg-white p-6 md:p-8 shadow-brutal-lg hover:shadow-brutal-xl hover:translate-x-[-4px] hover:translate-y-[-4px] transition-all animate-item">
+      <div className="space-y-4">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start">
+          <div>
+            <div className="text-black mb-2 font-black text-sm uppercase">Featured Project</div>
+            <h3 className="text-3xl font-black uppercase tracking-tight">
+              {project.title}
+            </h3>
           </div>
-          <p className="text-portfolio-textPrimary">{project.description}</p>
-          <div className="flex flex-wrap gap-2 pt-2">
-            {project.tech.map((tech) => (
-              <Badge
-                key={tech}
-                variant="outline"
-                className="bg-transparent border-portfolio-gray text-portfolio-textPrimary"
-              >
-                {tech}
-              </Badge>
-            ))}
+          <div className="flex space-x-4 mt-3 md:mt-1">
+            <a
+              href={project.github}
+              className="text-black hover:scale-110 transition-transform"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiGithub size={28} />
+            </a>
+            <a
+              href={project.live}
+              className="text-black hover:scale-110 transition-transform"
+              aria-label="Live Site"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiExternalLink size={28} />
+            </a>
           </div>
+        </div>
+        <p className="text-black font-semibold leading-relaxed">{project.description}</p>
+        <div className="flex flex-wrap gap-2 pt-2">
+          {project.tech.map((tech) => (
+            <Badge
+              key={tech}
+              variant="outline"
+              className="bg-white border-2 border-black text-black font-bold px-3 py-1"
+            >
+              {tech}
+            </Badge>
+          ))}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,40 +6,40 @@
 
 @layer base {
   :root {
-    /* Black Theme Colors */
-    --background: 0 0% 4%;               /* Near Black */
-    --foreground: 0 0% 95%;              /* Off White Text */
+    /* Neobrutalism - Monochromatic Bold */
+    --background: 0 0% 100%;             /* Pure White */
+    --foreground: 0 0% 0%;               /* Pure Black */
 
-    --portfolio-cardBg: #1a1a1a;
-    --portfolio-cardText: #ffffff;
-    --portfolio-green: #00ff88;
+    --portfolio-cardBg: #ffffff;
+    --portfolio-cardText: #000000;
+    --portfolio-green: #000000;          /* Black accent */
 
---card: 0 0% 10%;                        /* Dark card background */
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;                   /* White cards */
+    --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 150 100% 50%;             /* Bright Green */
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;                  /* Pure Black */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;               /* Dark Gray */
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 90%;               /* Light Gray */
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;        /* Dark Gray */
 
-    --accent: 0 0% 20%;                  /* Dark Accent */
-    --accent-foreground: 0 0% 95%;
+    --accent: 0 0% 10%;                  /* Near Black */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;            /* Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;                  /* Dark border */
-    --input: 0 0% 15%;
-    --ring: 150 100% 50%;                /* Bright Green Ring */
+    --border: 0 0% 0%;                   /* Black borders */
+    --input: 0 0% 100%;
+    --ring: 0 0% 0%;                     /* Black ring */
 
-    --radius: 0.5rem;
+    --radius: 0rem;                      /* Sharp corners for neobrutalism */
     
   }
 }
@@ -56,7 +56,7 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    @apply font-sans;
+    @apply font-sans font-bold;
   }
 
   section {
@@ -64,15 +64,15 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-[hsl(var(--foreground))] font-heading font-semibold;
+    @apply text-[hsl(var(--foreground))] font-heading font-black uppercase tracking-tight;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-4xl md:text-5xl lg:text-7xl;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
   }
 
   h3 {
@@ -84,27 +84,33 @@
   }
 
   p {
-    @apply text-[hsl(var(--foreground))];
+    @apply text-[hsl(var(--foreground))] font-semibold;
   }
 }
 
 @layer components {
   .section-title {
-    @apply flex items-center text-2xl md:text-3xl font-semibold mb-8 text-[hsl(var(--foreground))];
+    @apply flex items-center text-3xl md:text-4xl font-black mb-12 text-[hsl(var(--foreground))] uppercase;
   }
 
   .section-title::after {
     content: "";
-    @apply ml-4 h-px bg-[hsl(var(--border))] flex-grow;
+    @apply ml-6 h-1 bg-[hsl(var(--border))] flex-grow;
   }
 
   .nav-link {
-    @apply relative px-3 py-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors;
+    @apply relative px-4 py-2 text-[hsl(var(--foreground))] font-bold uppercase text-sm hover:bg-black hover:text-white transition-all border-2 border-transparent hover:border-black;
   }
 
   .button {
-    @apply px-4 py-2 border border-[hsl(var(--primary))] text-[hsl(var(--primary))] rounded transition-all
-    hover:bg-[hsl(var(--primary))/0.1];
+    @apply px-6 py-3 border-4 border-black bg-white text-black font-black uppercase text-sm
+    shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] 
+    hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all;
+  }
+
+  /* Neobrutalism card styling */
+  .neo-card {
+    @apply border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)];
   }
 
   /* Animation classes for staggered entrance */

@@ -76,16 +76,16 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="experience" className="bg-portfolio-section px-6">
+    <section id="experience" className="section bg-gray-50 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title animate-item">
-          <span className="text-portfolio-green mr-2">04.</span> Internship
+          <span className="mr-2">04.</span> INTERNSHIP
         </h2>
 
         {/* Mobile Layout (scrollable tabs with arrows) */}
         <div className="relative flex items-center my-4 md:hidden">
-          <button onClick={() => scrollTabs("left")} className="z-10 p-1">
-            <svg className="w-6 h-6 text-portfolio-textPrimary" fill="currentColor" viewBox="0 0 10 16">
+          <button onClick={() => scrollTabs("left")} className="z-10 p-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 10 16">
               <path d="M8.766.566A2 2 0 0 0 6.586 1L1 6.586a2 2 0 0 0 0 2.828L6.586 15A2 2 0 0 0 10 13.586V2.414A2 2 0 0 0 8.766.566Z" />
             </svg>
           </button>
@@ -97,10 +97,10 @@ const Experience = () => {
                   key={exp.id}
                   onClick={() => setActiveTabId(exp.id)}
                   className={cn(
-                    "px-4 py-2 whitespace-nowrap flex-shrink-0 border-b-2 transition-all",
+                    "px-4 py-2 whitespace-nowrap flex-shrink-0 border-4 font-bold uppercase text-sm transition-all",
                     activeTabId === exp.id
-                      ? "text-portfolio-green border-portfolio-green bg-portfolio-gray"
-                      : "text-portfolio-textSecondary border-transparent hover:bg-portfolio-lightNavy hover:text-portfolio-textPrimary"
+                      ? "bg-black text-white border-black"
+                      : "bg-white text-black border-black hover:bg-gray-100"
                   )}
                 >
                   {exp.company}
@@ -109,8 +109,8 @@ const Experience = () => {
             </div>
           </div>
 
-          <button onClick={() => scrollTabs("right")} className="z-10 p-1">
-            <svg className="w-6 h-6 text-portfolio-textPrimary" fill="currentColor" viewBox="0 0 10 16">
+          <button onClick={() => scrollTabs("right")} className="z-10 p-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 10 16">
               <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z" />
             </svg>
           </button>
@@ -119,15 +119,15 @@ const Experience = () => {
         {/* Desktop Layout (vertical tabs) */}
         <div className="hidden md:grid md:grid-cols-4 gap-4 animate-item">
           <div className="md:col-span-1">
-            <div className="flex md:flex-col overflow-x-auto md:overflow-x-visible">
+            <div className="flex md:flex-col border-4 border-black bg-white">
               {experiences.map((exp) => (
                 <button
                   key={exp.id}
                   className={cn(
-                    "px-4 py-3 text-left border-b-2 md:border-b-0 md:border-l-2 whitespace-nowrap md:whitespace-normal",
+                    "px-4 py-3 text-left font-bold uppercase text-sm border-b-4 last:border-b-0 border-black transition-all",
                     activeTabId === exp.id
-                      ? "text-portfolio-green border-portfolio-green bg-portfolio-gray"
-                      : "text-portfolio-textSecondary border-portfolio-gray hover:bg-portfolio-lightNavy hover:text-portfolio-textPrimary"
+                      ? "bg-black text-white"
+                      : "bg-white text-black hover:bg-gray-100"
                   )}
                   onClick={() => setActiveTabId(exp.id)}
                 >
@@ -138,19 +138,19 @@ const Experience = () => {
           </div>
 
           <div className="md:col-span-3 animate-item">
-            <div className="p-2">
-              <h3 className="text-xl font-medium mb-1">
+            <div className="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+              <h3 className="text-xl font-black uppercase mb-1">
                 {activeExperience.role}{" "}
-                <span className="text-portfolio-green">@ {activeExperience.company}</span>
+                <span className="text-gray-600">@ {activeExperience.company}</span>
               </h3>
-              <p className="text-portfolio-textSecondary mb-4">
+              <p className="text-gray-600 font-bold mb-4 border-b-2 border-black pb-2">
                 {activeExperience.date} | {activeExperience.location}
               </p>
               <ul className="space-y-3">
                 {activeExperience.description.map((item, i) => (
                   <li key={i} className="flex">
-                    <span className="text-portfolio-green mr-2 mt-1 flex-shrink-0">▹</span>
-                    <span>{item}</span>
+                    <span className="text-black font-black mr-3 mt-0.5">→</span>
+                    <span className="font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -160,19 +160,19 @@ const Experience = () => {
 
         {/* Common Content for Mobile (only visible on small screens) */}
         <div className="md:hidden animate-item">
-          <div className="p-2">
-            <h3 className="text-xl font-medium mb-1">
+          <div className="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <h3 className="text-lg font-black uppercase mb-1">
               {activeExperience.role}{" "}
-              <span className="text-portfolio-green">@ {activeExperience.company}</span>
+              <span className="text-gray-600">@ {activeExperience.company}</span>
             </h3>
-            <p className="text-portfolio-slate mb-4">
+            <p className="text-gray-600 font-bold mb-4 border-b-2 border-black pb-2">
               {activeExperience.date} | {activeExperience.location}
             </p>
             <ul className="space-y-3">
               {activeExperience.description.map((item, i) => (
                 <li key={i} className="flex">
-                  <span className="text-portfolio-green mr-2 mt-1 flex-shrink-0">▹</span>
-                  <span>{item}</span>
+                  <span className="text-black font-black mr-3 mt-0.5">→</span>
+                  <span className="font-semibold">{item}</span>
                 </li>
               ))}
             </ul>

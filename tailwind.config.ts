@@ -56,31 +56,36 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         portfolio: {
-  background: "#0a0a0a",         // Near black for page background
-  card: "#1a1a1a",               // Dark gray for cards
-  section: "#121212",            // Slightly lighter black for sections
-  gray: "#2a2a2a",               // Dark gray for borders / muted
-  textPrimary: "#ffffff",        // White text
-  textSecondary: "#a0a0a0",      // Light gray for subtext
-  accent: "#00ff88",             // Bright green accent
-  green: "#00ff88",              // Bright green for buttons and highlights
-  slate: "#808080",              // Mid-tone gray
-  lightSlate: "#b0b0b0",         // Light gray for hover effects
-  lightestSlate: "#404040",      // For secondary borders, backgrounds
+  background: "#ffffff",         // Pure white - neobrutalism
+  card: "#ffffff",               // White cards with black borders
+  section: "#f5f5f5",            // Very light gray sections
+  gray: "#e0e0e0",               // Light gray for subtle elements
+  textPrimary: "#000000",        // Pure black text
+  textSecondary: "#666666",      // Dark gray for secondary text
+  accent: "#000000",             // Black accent
+  green: "#000000",              // Black for highlights
+  slate: "#333333",              // Dark gray
+  lightSlate: "#999999",         // Medium gray
+  lightestSlate: "#cccccc",      // Light gray
   white: "#ffffff",              // Pure white
-  navy: "#000000",               // Pure black
-  lightNavy: "#1a1a1a",          // Dark gray background
+  navy: "#000000",               // Black
+  lightNavy: "#f9f9f9",          // Off-white
 }
 
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        heading: ["Poppins", "sans-serif"],
+        heading: ["Inter", "sans-serif"],
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0px",
+        md: "0px",
+        sm: "0px",
+      },
+      boxShadow: {
+        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'brutal-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'brutal-xl': '12px 12px 0px 0px rgba(0,0,0,1)',
       },
       keyframes: {
         "accordion-down": {

@@ -74,10 +74,10 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed w-full z-50 px-6 py-4 transition-all duration-300",
+        "fixed w-full z-50 px-6 py-4 transition-all duration-300 border-b-4 border-black",
         isScrolled
-          ? "bg-portfolio-background/95 backdrop-blur shadow-md"
-          : "bg-portfolio-background/50 backdrop-blur-sm"
+          ? "bg-white shadow-brutal"
+          : "bg-white/95"
       )}
     >
       <style>{`
@@ -87,41 +87,31 @@ const Header = () => {
         }
         .blinking-underscore {
           animation: blink 1s step-end infinite;
-          color: white;
+          color: black;
         }
       `}</style>
 
       <nav className="max-w-6xl mx-auto flex items-center justify-between">
         <a
           href="#"
-          className="text-portfolio-textPrimary font-heading font-bold text-2xl flex items-center"
+          className="text-black font-heading font-black text-3xl flex items-center uppercase tracking-tighter"
         >
           <span>{typedName}</span>
           <span className="blinking-underscore">_</span>
         </a>
-        <style>{`
-              @keyframes blink {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-              }
-              .blinking-underscore {
-                animation: blink 1s step-end infinite;
-                color: #10b981;
-              }
-            `}</style>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6">
-          <ul className="flex space-x-6">
+        <div className="hidden md:flex items-center space-x-4">
+          <ul className="flex space-x-2">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
                   className={cn(
-                    "text-lg text-portfolio-textSecondary hover:text-portfolio-green transition-all duration-300",
+                    "px-3 py-2 font-bold uppercase text-xs border-2 transition-all",
                     activeSection === item.href.slice(1)
-                      ? "underline underline-offset-4 text-portfolio-green"
-                      : ""
+                      ? "bg-black text-white border-black"
+                      : "bg-white text-black border-black hover:bg-black hover:text-white"
                   )}
                   onClick={(e) => {
                     e.preventDefault();
@@ -137,7 +127,7 @@ const Header = () => {
             href="/Java_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="button ml-4"
+            className="button"
           >
             Resume
           </a>
