@@ -21,14 +21,14 @@ const Hero = () => {
             Hi, my name is
           </p>
           <h1
-            className={` text-[#1a1a1a] transform ${
+            className={`text-portfolio-textPrimary transform ${
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             } transition-all duration-300 delay-200`}
           >
             Ajay Lohith Kulla.
           </h1>
           <h2
-            className={`text-portfolio-slate text-3xl md:text-5xl lg:text-6xl transform ${
+            className={`text-portfolio-textSecondary text-3xl md:text-5xl lg:text-6xl transform ${
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             } transition-all duration-300 delay-300`}
           >

@@ -6,40 +6,38 @@
 
 @layer base {
   :root {
-    /* Light Theme Colors */
-    --background: 0 0% 98%;              /* Marble White */
-    --foreground: 0 0% 10%;              /* Dark Text */
+    /* Black Theme Colors */
+    --background: 0 0% 4%;               /* Near Black */
+    --foreground: 0 0% 95%;              /* Off White Text */
 
-    --portfolio-cardBg: #9da8a6;
-  --portfolio-cardText: #1a1a1a;
-  --portfolio-green: #64ffda;
+    --portfolio-cardBg: #1a1a1a;
+    --portfolio-cardText: #ffffff;
+    --portfolio-green: #00ff88;
 
-  
+--card: 0 0% 10%;                        /* Dark card background */
+    --card-foreground: 0 0% 95%;
 
---card: 150 10% 100%;         /* Intended card background */
-  --card-foreground: 0 0% 10%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --primary: 150 100% 50%;             /* Bright Green */
+    --primary-foreground: 0 0% 0%;
 
-    --primary: 170 100% 40%;             /* Teal */
-    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;               /* Dark Gray */
+    --secondary-foreground: 0 0% 95%;
 
-    --secondary: 0 0% 90%;               /* Light Gray */
-    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    --muted: 0 0% 85%;
-    --muted-foreground: 0 0% 40%;
-
-    --accent: 0 0% 95%;                  /* Slightly Off White */
-    --accent-foreground: 0 0% 10%;
+    --accent: 0 0% 20%;                  /* Dark Accent */
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84% 60%;            /* Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 85%;                  /* Light border */
-    --input: 0 0% 85%;
-    --ring: 170 100% 40%;                /* Teal Ring */
+    --border: 0 0% 20%;                  /* Dark border */
+    --input: 0 0% 15%;
+    --ring: 150 100% 50%;                /* Bright Green Ring */
 
     --radius: 0.5rem;
     
@@ -56,11 +54,9 @@
   }
 
   body {
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  @apply font-sans;
-}
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    @apply font-sans;
   }
 
   section {

@@ -53,7 +53,7 @@ const Education = () => {
   }, []);
 
   return (
-    <section id="education" className="px-6" style={{ backgroundColor: "#edf4f7" }}>
+    <section id="education" className="px-6 bg-portfolio-background">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title animate-item">
           <span className="text-portfolio-green mr-2">05.</span> Education
@@ -68,7 +68,7 @@ const Education = () => {
                   <div className="absolute w-3 h-3 bg-portfolio-green rounded-full -left-[6px] top-1"></div>
                   <h4 className="text-lg font-medium">{edu.degree}</h4>
                   <p className="text-portfolio-green text-sm mb-1">{edu.period}</p>
-                  <p className="text-portfolio-slate">{edu.institution}</p>
+                  <p className="text-portfolio-textSecondary">{edu.institution}</p>
                   <p className="font-semibold">{edu.gpa}</p>
                 </div>
               ))}

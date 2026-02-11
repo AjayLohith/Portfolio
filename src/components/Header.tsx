@@ -76,8 +76,8 @@ const Header = () => {
       className={cn(
         "fixed w-full z-50 px-6 py-4 transition-all duration-300",
         isScrolled
-          ? "bg-portfolio-navy/90 backdrop-blur shadow-md"
-          : "bg-transparent"
+          ? "bg-portfolio-background/95 backdrop-blur shadow-md"
+          : "bg-portfolio-background/50 backdrop-blur-sm"
       )}
     >
       <style>{`
@@ -94,7 +94,7 @@ const Header = () => {
       <nav className="max-w-6xl mx-auto flex items-center justify-between">
         <a
           href="#"
-          className="text-[#1a1a1a] font-heading font-bold text-2xl flex items-center"
+          className="text-portfolio-textPrimary font-heading font-bold text-2xl flex items-center"
         >
           <span>{typedName}</span>
           <span className="blinking-underscore">_</span>
@@ -118,7 +118,7 @@ const Header = () => {
                 <a
                   href={item.href}
                   className={cn(
-                    "text-lg text-portfolio-lightSlate hover:text-portfolio-green transition-all duration-300",
+                    "text-lg text-portfolio-textSecondary hover:text-portfolio-green transition-all duration-300",
                     activeSection === item.href.slice(1)
                       ? "underline underline-offset-4 text-portfolio-green"
                       : ""
@@ -137,7 +137,7 @@ const Header = () => {
             href="/Java_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="button ml-4 text-[#1a1a1a]"
+            className="button ml-4"
           >
             Resume
           </a>
@@ -146,7 +146,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsSidebarOpen(true)}
-          className="text-[#1a1a1a] inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="text-portfolio-textPrimary inline-flex items-center p-2 mt-2 ms-3 text-sm rounded-lg sm:hidden hover:bg-portfolio-gray focus:outline-none focus:ring-2 focus:ring-portfolio-gray"
         >
           <span className="sr-only">Open sidebar</span>
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -161,7 +161,7 @@ const Header = () => {
         {/* Sidebar */}
         <aside
           className={cn(
-            "fixed top-0 right-0 z-40 w-64 h-screen transition-transform bg-portfolio-lightNavy",
+            "fixed top-0 right-0 z-40 w-64 h-screen transition-transform bg-portfolio-card border-l border-portfolio-gray",
             isSidebarOpen ? "translate-x-0" : "translate-x-full"
           )}
           aria-label="Sidebar"
@@ -169,7 +169,7 @@ const Header = () => {
           <div className="h-full px-3 py-4 overflow-y-auto">
             <button
               onClick={() => setIsSidebarOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              className="absolute top-4 right-4 text-portfolio-textSecondary hover:text-portfolio-textPrimary"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -185,7 +185,7 @@ const Header = () => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="flex items-center p-2 text-portfolio-textPrimary rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-portfolio-textPrimary rounded-lg hover:bg-portfolio-gray group"
                     onClick={(e) => {
                       e.preventDefault();
                       handleMenuClick(item.href);
@@ -200,7 +200,7 @@ const Header = () => {
                   href="/ajayResume (1).pdf" // Update with your actual resume path
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button mt-4 text-portfolio-textPrimary"
+                  className="button mt-4"
                   onClick={() => setIsSidebarOpen(false)}
                 >
                   Resume

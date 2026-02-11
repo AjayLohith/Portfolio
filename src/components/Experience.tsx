@@ -76,7 +76,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="experience" className="bg-portfolio-lightNavy/30 px-6">
+    <section id="experience" className="bg-portfolio-section px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title animate-item">
           <span className="text-portfolio-green mr-2">04.</span> Internship
@@ -99,8 +99,8 @@ const Experience = () => {
                   className={cn(
                     "px-4 py-2 whitespace-nowrap flex-shrink-0 border-b-2 transition-all",
                     activeTabId === exp.id
-                      ? "text-portfolio-green border-portfolio-green bg-portfolio-green/10"
-                      : "text-portfolio-slate border-transparent hover:bg-portfolio-lightNavy hover:text-portfolio-lightestSlate"
+                      ? "text-portfolio-green border-portfolio-green bg-portfolio-gray"
+                      : "text-portfolio-textSecondary border-transparent hover:bg-portfolio-lightNavy hover:text-portfolio-textPrimary"
                   )}
                 >
                   {exp.company}
@@ -126,8 +126,8 @@ const Experience = () => {
                   className={cn(
                     "px-4 py-3 text-left border-b-2 md:border-b-0 md:border-l-2 whitespace-nowrap md:whitespace-normal",
                     activeTabId === exp.id
-                      ? "text-portfolio-green border-portfolio-green bg-portfolio-green/10"
-                      : "text-portfolio-slate border-portfolio-lightNavy hover:bg-portfolio-lightNavy hover:text-portfolio-lightestSlate"
+                      ? "text-portfolio-green border-portfolio-green bg-portfolio-gray"
+                      : "text-portfolio-textSecondary border-portfolio-gray hover:bg-portfolio-lightNavy hover:text-portfolio-textPrimary"
                   )}
                   onClick={() => setActiveTabId(exp.id)}
                 >
@@ -143,7 +143,7 @@ const Experience = () => {
                 {activeExperience.role}{" "}
                 <span className="text-portfolio-green">@ {activeExperience.company}</span>
               </h3>
-              <p className="text-portfolio-slate mb-4">
+              <p className="text-portfolio-textSecondary mb-4">
                 {activeExperience.date} | {activeExperience.location}
               </p>
               <ul className="space-y-3">

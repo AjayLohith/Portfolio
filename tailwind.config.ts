@@ -56,19 +56,20 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         portfolio: {
-  background: "#f9fbfd",         // Slate white for page background
-  card: "#ffffff",               // White for cards
-  section: "#f1f5f9",            // Slightly off-white section blocks
-  gray: "#e2e8f0",               // Light gray for borders / muted
-  textPrimary: "#0f172a",        // Very dark blue-gray (almost black)
-  textSecondary: "#334155",      // Soft dark slate for subtext
-  accent: "#0ea5e9",             // Sky blue accent (alternative to green)
-  green: "#10b981",              // Teal green for buttons and highlights
-  slate: "#64748b",              // Standard slate for mid-tone UI elements
-  lightSlate: "#94a3b8",         // For hover effects or subtitles
-  lightestSlate: "#cbd5e1",      // For secondary borders, backgrounds
-  white: "#ffffff",    
-            // Full white (cards, popovers)
+  background: "#0a0a0a",         // Near black for page background
+  card: "#1a1a1a",               // Dark gray for cards
+  section: "#121212",            // Slightly lighter black for sections
+  gray: "#2a2a2a",               // Dark gray for borders / muted
+  textPrimary: "#ffffff",        // White text
+  textSecondary: "#a0a0a0",      // Light gray for subtext
+  accent: "#00ff88",             // Bright green accent
+  green: "#00ff88",              // Bright green for buttons and highlights
+  slate: "#808080",              // Mid-tone gray
+  lightSlate: "#b0b0b0",         // Light gray for hover effects
+  lightestSlate: "#404040",      // For secondary borders, backgrounds
+  white: "#ffffff",              // Pure white
+  navy: "#000000",               // Pure black
+  lightNavy: "#1a1a1a",          // Dark gray background
 }
 
       },

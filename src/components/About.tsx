@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="px-6" style={{ backgroundColor: "#edf4f7" }}>
+    <section id="about" className="px-6 bg-portfolio-section">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title animate-item">
           <span className="text-portfolio-green mr-2">01.</span> About Me

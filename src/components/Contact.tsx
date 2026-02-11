@@ -26,14 +26,14 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="bg-portfolio-lightNavy/30 px-6 py-12">
+    <section id="contact" className="bg-portfolio-section px-6 py-12">
       <div className="max-w-3xl mx-auto text-center">
         <div className="animate-item">
           <span className="text-portfolio-green text-8xl md:text-6xl font-bold my-4 animate-item">
             Contact
           </span>
         </div>
-        <p className="text-portfolio-slate mb-8 max-w-lg mx-auto animate-item">
+        <p className="text-portfolio-textSecondary mb-8 max-w-lg mx-auto animate-item">
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!
         </p>
 

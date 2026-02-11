@@ -3,6 +3,28 @@ import { useEffect } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi"; // ✅ Import icons
 
 const projects = [
+  {
+  title: "SnapLink",
+  description:
+    "An open-source, scalable URL shortening service built to simplify link sharing and management. It features a high-performance Spring Boot backend with Redis caching, rate limiting for API protection, and persistent storage using PostgreSQL. The modern React frontend enables users to generate, customize, validate, and track short URLs seamlessly, with containerized deployment for smooth scalability.",
+  tech: [
+    "React (Vite)",
+    "Tailwind CSS",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Spring Boot",
+    "Java",
+    "Redis",
+    "PostgreSQL (Supabase)",
+    "Docker",
+    "Render",
+    "Vercel"
+  ],
+  github: "https://github.com/AjayLohith/url-shortner",
+  live: "https://snaplinkk.vercel.app/",
+  image: "/placeholder.svg",
+},
   
  {
   title: "PlacementPedia",
@@ -76,7 +98,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
                       transition-transform duration-300 z-0 pointer-events-none" />
 
       {/* Actual Card */}
-      <div className="relative z-10 bg-[#c8f3eb] text-[#1a1a1a] rounded-md shadow-md overflow-hidden animate-item">
+      <div className="relative z-10 bg-portfolio-card text-portfolio-textPrimary rounded-md shadow-md overflow-hidden animate-item">
         <div className="p-6 md:p-8 space-y-4">
           <div className="flex justify-between items-start">
             <div>
@@ -88,7 +110,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             <div className="flex space-x-4 mt-1">
               <a
                 href={project.github}
-                className="text-[#1a1a1a] hover:text-portfolio-green transition-colors"
+                className="text-portfolio-textPrimary hover:text-portfolio-green transition-colors"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -97,7 +119,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </a>
               <a
                 href={project.live}
-                className="text-[#1a1a1a] hover:text-portfolio-green transition-colors"
+                className="text-portfolio-textPrimary hover:text-portfolio-green transition-colors"
                 aria-label="Live Site"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -106,13 +128,13 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </a>
             </div>
           </div>
-          <p className="text-[#1a1a1a]">{project.description}</p>
+          <p className="text-portfolio-textPrimary">{project.description}</p>
           <div className="flex flex-wrap gap-2 pt-2">
             {project.tech.map((tech) => (
               <Badge
                 key={tech}
                 variant="outline"
-                className="bg-transparent border-[#1a1a1a] text-[#1a1a1a]"
+                className="bg-transparent border-portfolio-gray text-portfolio-textPrimary"
               >
                 {tech}
               </Badge>
@@ -146,7 +168,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="px-6" style={{ backgroundColor: "#edf4f7" }}>
+    <section id="projects" className="px-6 bg-portfolio-section">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title animate-item">
           <span className="text-portfolio-green mr-2">03.</span> Projects

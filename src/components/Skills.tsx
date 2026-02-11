@@ -28,7 +28,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-portfolio-lightNavy/30 px-4 py-12 scroll-mt-20"
+      className="bg-portfolio-background px-4 py-12 scroll-mt-20"
     >
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
@@ -76,8 +76,8 @@ const Skills = () => {
               <div className="absolute inset-0 border-2  border-portfolio-green rounded-lg translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0 pointer-events-none" />
 
               {/* Solid Card */}
-              <div className="relative  bg-[#c8f3eb]  text-[#080808] p-4 rounded-lg shadow-lg z-10">
-                <h3 className="text-lg font-medium mb-4 text-[#080808] text-portfolio-green">
+              <div className="relative bg-portfolio-card text-portfolio-textPrimary p-4 rounded-lg shadow-lg z-10">
+                <h3 className="text-lg font-medium mb-4 text-portfolio-green">
                   {section.title}
                 </h3>
                 <ul className="space-y-3">
@@ -87,7 +87,7 @@ const Skills = () => {
                         <span>{skill.label}</span>
                         <span>{skill.level}</span>
                       </p>
-                      <div className="w-full bg-portfolio-slate rounded-full h-2">
+                      <div className="w-full bg-portfolio-gray rounded-full h-2">
                         <div
                           className="bg-portfolio-green h-2 rounded-full progress-bar"
                           data-width={skill.level}
