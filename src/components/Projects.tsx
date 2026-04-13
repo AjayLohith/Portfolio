@@ -27,23 +27,24 @@ const projects = [
 },
   
  {
-  title: "PlacementPedia",
+  title: "PlacementBoard",
   description:
-    "A full-stack platform designed to help college students prepare for placements by accessing real interview experiences shared by peers. Features include user authentication, admin approval for content quality, and dynamic AI-generated company descriptions. Organized company-wise content and modern deployment architecture ensure a smooth experience.",
+    "A comprehensive placement and career development portal designed to connect students, job seekers, and employers. Features job listings, company profiles, interview experiences, and AI-powered career guidance. Built with a robust Spring Boot backend, MongoDB persistence, and modern React frontend. Users can explore job opportunities, discover companies, share interview experiences, and access AI-powered career guidance powered by Groq's LLaMA 3.3 model.",
   tech: [
     "React (Vite)",
+    "JavaScript",
     "Tailwind CSS",
-    "React Router",
-    "Node.js",
-    "Express.js",
+    "Spring Boot",
+    "Java",
     "MongoDB",
     "JWT",
-    "Firebase API",
+    "Groq AI",
+    "Docker",
     "Render",
     "Vercel"
   ],
-  github: "https://github.com/AjayLohith/PlacementPortal", // Replace with actual repo link
-  live: "https://placementpedia.vercel.app/",               // Replace with actual live link
+  github: "https://github.com/AjayLohith/PlacementBoard",
+  live: "https://placement-board-six.vercel.app/",
   image: "/placeholder.svg",
 }
 ,
