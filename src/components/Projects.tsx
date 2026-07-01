@@ -3,6 +3,16 @@ import { useEffect } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi"; // ✅ Import icons
 
 const projects = [
+   {
+    title: "Distributed Key-Value Store",
+    description:
+      "A fault-tolerant distributed key-value store inspired by Redis, DynamoDB, and etcd. Built using Spring Boot microservices with an API Gateway for load balancing across 3 independent nodes. Features event-driven replication via Kafka, Read/Write-Through caching with Redis, PostgreSQL persistence, and full Dockerized multi-container deployment.",
+    tech: [
+      "Java", "Spring Boot", "Spring Cloud Gateway", "Kafka",
+      "Redis", "PostgreSQL", "Docker", "React"
+    ],
+    github: "https://github.com/kuderella-abhilash/Distributed-Key-Value-Draft/tree/main"
+  },
   {
   title: "SnapLink",
   description:
@@ -101,6 +111,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               {project.title}
             </h3>
           </div>
+
+
           <div className="flex space-x-4 mt-3 md:mt-1">
             <a
               href={project.github}
@@ -111,16 +123,22 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             >
               <FiGithub size={28} />
             </a>
-            <a
-              href={project.live}
-              className="text-black hover:scale-110 transition-transform"
-              aria-label="Live Site"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiExternalLink size={28} />
-            </a>
+
+            {"live" in project && project.live && (
+              <a
+                href={project.live}
+                className="text-black hover:scale-110 transition-transform"
+                aria-label="Live Site"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiExternalLink size={28} />
+              </a>
+            )}
+              {/* </a> */}
           </div>
+
+
         </div>
         <p className="text-black font-semibold leading-relaxed">{project.description}</p>
         <div className="flex flex-wrap gap-2 pt-2">
