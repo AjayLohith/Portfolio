@@ -228,7 +228,7 @@ const Skills = () => {
           <div className="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-6 border-4 border-black bg-white p-4 shadow-brutal hover:shadow-brutal-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all animate-item">
             <span className="text-lg font-black uppercase mb-3 block opacity-60">Also Working With</span>
             <div className="flex flex-wrap gap-2">
-              {["Kafka","Microservices", "JWT", "Vite", "Vercel", "Render", "Postman", "RabbitMQ", "Mongoose"].map((skill) => (
+              {["Kafka","Agentic AI","LLM","MCP","Vector DBs","Microservices", "JWT", "Vite", "Vercel", "Render", "Postman", "Mongoose"].map((skill) => (
                 <span key={skill} className="px-3 py-1.5 border-2 border-black bg-white text-black font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer">
                   {skill}
                 </span>

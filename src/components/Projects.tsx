@@ -13,6 +13,30 @@ const projects = [
     ],
     github: "https://github.com/kuderella-abhilash/Distributed-Key-Value-Draft/tree/main"
   },
+
+
+  {
+  title: "PlacementBoard",
+  description:
+    "A comprehensive placement and career development portal designed to connect students, job seekers, and employers. Features job listings, company profiles, interview experiences, and AI-powered career guidance. Built with a robust Spring Boot backend, MongoDB persistence, and modern React frontend. Users can explore job opportunities, discover companies, share interview experiences, and access AI-powered career guidance powered by Groq's LLaMA 3.3 model.",
+  tech: [
+    "React (Vite)",
+    "JavaScript",
+    "Tailwind CSS",
+    "Spring Boot",
+    "Java",
+    "MongoDB",
+    "JWT",
+    "Groq AI",
+    "Docker",
+    "Render",
+    "Vercel"
+  ],
+  github: "https://github.com/AjayLohith/PlacementBoard",
+  live: "https://placement-board-six.vercel.app/",
+  image: "/placeholder.svg",
+},
+
   {
   title: "SnapLink",
   description:
@@ -36,27 +60,7 @@ const projects = [
   image: "/placeholder.svg",
 },
   
- {
-  title: "PlacementBoard",
-  description:
-    "A comprehensive placement and career development portal designed to connect students, job seekers, and employers. Features job listings, company profiles, interview experiences, and AI-powered career guidance. Built with a robust Spring Boot backend, MongoDB persistence, and modern React frontend. Users can explore job opportunities, discover companies, share interview experiences, and access AI-powered career guidance powered by Groq's LLaMA 3.3 model.",
-  tech: [
-    "React (Vite)",
-    "JavaScript",
-    "Tailwind CSS",
-    "Spring Boot",
-    "Java",
-    "MongoDB",
-    "JWT",
-    "Groq AI",
-    "Docker",
-    "Render",
-    "Vercel"
-  ],
-  github: "https://github.com/AjayLohith/PlacementBoard",
-  live: "https://placement-board-six.vercel.app/",
-  image: "/placeholder.svg",
-}
+ 
 ,
 
  {
