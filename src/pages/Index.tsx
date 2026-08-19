@@ -41,7 +41,7 @@ const Index = () => {
           // Force show elements after a delay as fallback
           setTimeout(() => {
             el.classList.add("show");
-          }, 1000);
+          }, 600);
         });
       }
     }, 100);
@@ -57,7 +57,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-portfolio-background min-h-screen">
+    <div className="bg-portfolio-background min-h-screen w-full overflow-x-hidden">
       <Header />
       <main>
         <Hero />

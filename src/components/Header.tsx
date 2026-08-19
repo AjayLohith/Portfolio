@@ -136,7 +136,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsSidebarOpen(true)}
-          className="text-portfolio-textPrimary inline-flex items-center p-2 mt-2 ms-3 text-sm rounded-lg sm:hidden hover:bg-portfolio-gray focus:outline-none focus:ring-2 focus:ring-portfolio-gray"
+          className="text-portfolio-textPrimary inline-flex items-center p-2 text-sm border-2 border-black md:hidden hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black"
         >
           <span className="sr-only">Open sidebar</span>
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -151,8 +151,10 @@ const Header = () => {
         {/* Sidebar */}
         <aside
           className={cn(
-            "fixed top-0 right-0 z-40 w-64 h-screen transition-transform bg-portfolio-card border-l border-portfolio-gray",
-            isSidebarOpen ? "translate-x-0" : "translate-x-full"
+            "fixed top-0 right-0 z-40 w-64 h-screen max-w-[80vw] transition-transform bg-portfolio-card border-l-4 border-black",
+            isSidebarOpen
+              ? "translate-x-0"
+              : "translate-x-full invisible pointer-events-none"
           )}
           aria-label="Sidebar"
         >
@@ -187,7 +189,7 @@ const Header = () => {
               ))}
               <li>
                 <a
-                  href="/ajayResume (1).pdf" // Update with your actual resume path
+                  href="/Java_Developer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button mt-4"

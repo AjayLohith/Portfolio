@@ -53,16 +53,14 @@ const Hero = () => {
         </div>
 
         {/* Right Side: Pixel Art Setup */}
-        <div 
-          className={`relative ml-auto mr-1 transform translate-x-9 ${
+        <div
+          className={`relative w-full lg:ml-auto lg:mr-1 transform lg:translate-x-9 ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           } transition-all duration-500 delay-300`}
         >
-          {/* Neobrutalist frame - stretched horizontally */}
-          <div 
-            className="relative border-4 border-black bg-white p-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-4px] hover:translate-y-[-4px] transition-all"
-            style={{ transform: "scaleX(1.25)" }}
-          >
+          {/* Neobrutalist frame - stretched horizontally on desktop only,
+              so it never pushes the page wider than the mobile viewport */}
+          <div className="relative border-4 border-black bg-white p-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] lg:scale-x-125 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-4px] hover:translate-y-[-4px] transition-[transform,box-shadow] duration-150 ease-out">
             <img
               src="/desk-setup.gif"
               alt="Pixel Art Developer Setup"
