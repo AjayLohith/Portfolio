@@ -3,14 +3,26 @@ import { cn } from "@/lib/utils";
 
 const experiences = [
   {
-    id: "igiat",
-    company: "Indo German Institute of Advanced Technology",
-    role: "Intern",
-    date: "May 2024 - Jul 2024",
-    location: "Visakhapatnam, AP",
+    id: "metaverse-ventures",
+    company: "Metaverse Ventures",
+    role: "AI Engineer",
+    date: "Jul 2026 - Sep 2026",
+    location: "Hyderabad",
     description: [
-      "Documented and analyzed microcontrollers and processors.",
-      "Captured workflows via photos and converted data into structured reports.",
+      "Engineered a data synchronization pipeline to sync PostgreSQL user data into HydraDB as LLM context, implementing deduplication and idempotent processing to maintain consistent, accurate agent memory.",
+      "Built event-driven ingestion workflows using Pipedream to process webhook data from Gmail, Slack, Jira, and GitHub, transforming and persisting external application data into PostgreSQL.",
+      "Integrated personal-context and memory workflows using GetMembrane and Unabyss, enabling agents to retrieve relevant user context for more accurate and personalized responses.",
+    ],
+  },
+  {
+    id: "elite",
+    company: "Elite Softech Solutions",
+    role: "Full Stack Intern",
+    date: "May 2025 - Jul 2025",
+    location: "Remote",
+    description: [
+      "Built and maintained backend APIs using Node.js and Express.",
+      "Worked on dynamic UI components with React.",
     ],
   },
   {
@@ -25,14 +37,14 @@ const experiences = [
     ],
   },
   {
-    id: "elite",
-    company: "Elite Softech Solutions",
-    role: "Full Stack Intern",
-    date: "May 2025 - Jul 2025",
-    location: "Remote",
+    id: "igiat",
+    company: "Indo German Institute of Advanced Technology",
+    role: "Intern",
+    date: "May 2024 - Jul 2024",
+    location: "Visakhapatnam, AP",
     description: [
-      "Built and maintained backend APIs using Node.js and Express.",
-      "Worked on dynamic UI components with React.",
+      "Documented and analyzed microcontrollers and processors.",
+      "Captured workflows via photos and converted data into structured reports.",
     ],
   },
 ];
